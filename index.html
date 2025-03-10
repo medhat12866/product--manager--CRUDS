@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>CRUDS</title>
+  </head>
+  <body >
+    <div class="container">
+      <i class="ri-moon-line moon icon active"></i>
+      <i class="ri-sun-line sun icon "></i>
+      <!-- ~~~~~~~~~ header ~~~~~~~~~ -->
+      <div class="header">
+        <h2>crduds</h2>
+        <p>product manager</p>
+      </div>
+      <!-- ~~~~~~~~~ inputs ~~~~~~~~~ -->
+      <div class="inputs">
+        <input id="productTitle" class="product__name" type="text" placeholder="product name" />
+        <div class="price">
+          <input type="number" onkeyup="getTotal()" id="price" placeholder="price" />
+          <input type="number" onkeyup="getTotal()" id="taxes" placeholder="taxes" />
+          <input type="number" onkeyup="getTotal()" id="ads" placeholder="ads" />
+          <input type="number" onkeyup="getTotal()" id="discount" placeholder="discount" />
+          <small class="total" id="total"></small>
+        </div>
+        <input type="number" id="count" placeholder="count" />
+        <input type="text" id="category" placeholder="category" />
+        <button id="submit">create</button>
+      </div>
+      <!-- ~~~~~~~~~ optputs ~~~~~~~~~ -->
+      <div class="outputs">
+        <div class="searchBlock">
+          <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
+          <div class="btn__search">
+            <button onclick=" getSearchMood(this.id)" id="searchTitle">search by Title</button>
+            <button onclick=" getSearchMood(this.id)" id="searchCategory">search by category</button>
+          </div>
+        </div>
+        <div id="deleteAll">
+          
+        </div>
+        <table class="table-container ">
+          <tr>
+            <th>id</th>
+            <th>title</th>
+            <th>price</th>
+            <th>taxes</th>
+            <th>ads</th>
+            <th>discount</th>
+            <th>total</th>
+            <th>category</th>
+            <th>updata</th>
+            <th>delete</t>
+          </tr>
+          <tbody id="tbody">
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
